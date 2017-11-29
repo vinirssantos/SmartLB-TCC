@@ -1,0 +1,35 @@
+\chapter{Introdução  \label{cap:introducao}}
+
+A necessidade de alto desempenho, proveniente de um cresimento da produção de software deu abertura para o desenvolvimento dos sistemas computacionais, surgidos para suprir essa demanda \cite{artigoSalao2017}.
+
+A medida que novas simulações computacionais são desenvolvidas, aumenta a demanda por processamento dos sistemas de HPC. Um dos componentes de hardware que apresentou uma enorme evolução foi o processador, que passou a proporcionar a execução simultanea de aplicações. Assim, a programação paralela passa ser importante, possibilitando que aplicações sejam divididas em partes e executadas em paralelo nas unidades de processamento \cite{pilla2015programaccao}.
+
+A maioria das aplicações paralelas envolve comportamentos dinâmicos ou cálculos baseados em diversas fórmulas complexas. Por conta disso, empresas e instituições buscam adquirir uma infraestrutura suficiente para suportar tais aplicações \cite{arruda2015balanceamento}. O grande problema por trás disso é que na maioria das vezes não há uma preocupação com o desbalanceamento de carga gerado por estas aplicações, impedindo que as máquinas paralelas aproveitem todo o seu potencial \cite{padoin2014balanceamento}. Diante deste problema é que balanceadores de carga são desenvolvidos almejando um equilíbrio de cargas nos processadores.
+
+
+
+\section{Problema a ser discutido}
+
+A demanda por sistemas de alto desempenho cresce cada vez mais, à medida que novas aplicações simulam sistemas cada vez mais complexos. As evoluções na forma de concepção dos sistemas e na fabricação dos processadores tem permitido ultrapassar barreiras de desempenho, uma vez que aplicações complexas são divididas em tarefas menores e executadas simultaneamente em nos núcleos das unidades de processamento. 
+
+No entanto, tais aplicações geralmente apresentam cargas computacionais diferentes, o que dificulta uma eficiente utilização dos sistemas computacionais. A modelagem deste problema é complexa fazendo com que muitas aplicações sejam executadas com desbalanceamento de carga e excessiva comunicação entre tarefas~\cite{pilla2015programaccao, padoin2017ICCS}. Essa é uma preocupação que surge devido ao seu caráter impeditivo quanto ao alcance de uma boa eficiência na utilização dos recursos dos sistemas paralelos~\cite{padoin2014saving}.
+
+Nesse contexto, soluções que empregam estratégias para aumentar a eficiência dos recursos paralelos disponíveis vem sendo cada vez mais desenvolvidas e utilizadas. Balanceadores de Carga (BC), almejam detectar e corrigir dinamicamente tais desbalanceamentos, melhorando a utilização dos recursos disponíveis~\cite{viniciusWSCAD2017}. Deste modo, este trabalho apresenta um balanceador de carga denominado \newlb que almeja a redução do tempo de execução de aplicações paralelas executadas em ambientes multiprocessados.
+
+\section{Objetivo}
+
+Este artigo tem por objetivo mostrar o desenvolvimento do Balanceador de Carga(BC) \newlb juntamente com seus resultados, que visam a redução de migrações de processos, uma vez que o número de migrações de processos impacata no tempo total de execução da aplicação. Desta forma optimizando a execução de grandes aplicações computacionais.  
+
+\section{Organização do trabalho}
+
+Este trabalho está organizado em cinco capítulos, distribuídos da seguinte maneira: 
+
+No Capítulo 1 apresenta-se a introdução do trabalho, onde ocorre a contextualização referente ao tema de pesquisa, bem como é exposto o objetivo deste trabalho.
+
+No Capítulo 2, realiza-se um apanhado geral sobre o estado da arte das tecnologias a serem utilizadas, abordando os principais conceitos sobre HPC e E/S, bem como informações das arquiteturas dos dispositivos e softwares, dentre outros itens que irão compor o escopo deste trabalho.
+
+No Capítulo 3, é apresentado a metodologia e o ambiente onde os testes foram realizados, descrevendo  os computadores utilizados em nossos testes, processador, sistema operacional, informações da ferramenta de benchmark utilizada, dentre outras configurações.
+
+No Capítulo 4 é mensurados os resultados obtidos, apresentando as diferenças percebidas e os principais pontos observados nas execuções e arquiteturas.
+
+Por fim, no Capítulo 5 serão apresentadas as considerações finais acerca dos resultados alcançados, bem como a sugestão para trabalhos futuros.

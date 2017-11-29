@@ -1,0 +1,37 @@
+\section{Fundamentos de HPC}
+A computação de alto desempenho - do termo em inglês High-Performance Computing (HPC) - consiste na utilização de energia computacional para a realização de tarefas de grande complexidade envolvendo o processamento de um elevado volume de dados cujo estações de trabalho padrão não possuem recursos suficientes para resolver. Baseia-se no conceito de agrupamento, onde se faz a utilização de várias máquinas interligadas que se comunicam através de meios físicos e lógicos, acumulando poder computacional e trabalhando como se fosse uma única máquina. A utilização dessa técnica diminui consideravelmente os tempos de processamento e denomina-se como \textit{cluster}. Para realizar essa distribuição de dados e operações entre as máquinas, utiliza-se do conceito de paralelização.
+
+Segundo \citeonline{HPC} , existem dois tipos de configuração de hardware  que são geralmente utilizados para  a implementação de sistemas HPC:
+
+\begin{enumerate}
+\item Máquinas de memória compartilhada 
+\item Clusters de memória distribuídos 
+\end{enumerate}
+
+No caso de máquinas de memória compartilhada, a memória de acesso aleatório (RAM) pode ser acessada por todas as unidades de processamento. Já quando se trata de clusters de memória distribuídos, a memória é inacessível entre diferentes unidades de processamento. Entretanto, ao usar uma configuração de memória distribuída, é necessário que ocorra uma interconexão de rede para enviar mensagens entre as unidades de processamento (ou usar outros mecanismos de comunicação), devido ao fato de não ser possível acesso ao mesmo espaço de memória. Sistemas HPC modernos são muitas vezes uma implementação híbrida de ambos os conceitos \cite{wojciechowskijava}. Na Figura \ref{fig:hpc-hibrido} pode ser observado a dinâmica da implementção híbrida.
+
+\begin{figure}[htb]
+	\caption{\label{fig:hpc-hibrido} Diagrama mostrando a dinâmica da computação paralela híbrida.}
+	\begin{center}
+	    \includegraphics[scale=2]{figuras/hpc_hibrido.jpg}
+	\end{center}
+	\legend{Fonte: \cite{HPC}}
+\end{figure}
+
+\begin{citacao}
+O principal uso da computação de alto desempenho está na realização de cálculos matemáticos complexos onde estão envolvidos um grande conjunto de dados. Atende diversas áreas, como a financeira, biológica, física, médica, matemática, entre outras, nas quais demandam grande poder computacional na realização de suas tarefas. Alguns exemplos incluem processamento de imagens, mecânica dos fluidos, previsão do tempo e análises financeiras \cite{eficiencia_comp}.
+\end{citacao}
+
+Ainda conforme \cite{eficiencia_comp}, o aumento constante da demanda por sistemas computacionais cada vez mais eficientes, em relação ao consumo de energia, fez com que a comunidade científica dedicasse atenção em busca de sistemas híbridos customizados. É possível calcular a eficiência energética de um sistema de alto desempenho realizando a análise de quantas operações de ponto flutuante (números reais) são executadas a cada segundo, e dividir pelo consumo energético em Watt (GFLOPs/W).
+
+O site Green500.org elabora uma lista, duas vezes por ano, onde apresenta o \textit{ranking} de classificação dos sistemas mais eficientes. As primeiras posições são ocupadas por computadores híbridos que utilizam aceleradores. É possível perceber que a cada nova lista aumenta o número de computadores híbridos entre as primeiras posições \cite{eficiencia_comp}.
+
+De acordo com a lista Green500 de novembro de 2016 \cite{green500}, o primeiro supercomputador in-house petascale da NVIDIA, DGX SATURNV (Figura \ref{fig:dgx-saturnv}), ganhou o primeiro lugar na lista, com uma classificação de 9,46 GFLOPS/W. Logo, num intervalo de 6 meses foi apresentado um aumento de 40\% na eficiência energética, com relação à lista Green500 de junho de 2016, onde o supercomputador Shoubu havia liderado o ranking com a classificação de 6,67 GFLOPS/W.
+
+\begin{figure}[htb]
+	\caption{\label{fig:dgx-saturnv} DGX SATURNV, o supercomputador petascale da NVIDIA.}
+	\begin{center}
+	    \includegraphics[scale=0.30]{figuras/dgx_saturnv.jpg}
+	\end{center}
+	\legend{Fonte: \cite{nividea}}
+\end{figure}

@@ -1,0 +1,15 @@
+\section{Trabalhos Relacionados}
+Diferentes abordagens tem alcançado resultados positivos quando empregado balanceamento de carga para redução do tempo de execução.
+Dentre elas destacam-se as estratégias centralizadas e distribuídas, sendo que atualmente novas abordagem hierárquica vem sendo propostas. 
+Nestas novas abordagens, os núcleos de processamento são  divididos em grupos independentes e organizados em uma árvore onde  
+cada nível da árvore é composto por grupos de núcleos. Deste modo, quanto mais núcleos  são adicionados aos grupos, menor é o uso da memória pelo BC.
+Usando esta abordagem, Zheng apresenta um BC hierárquica denominado \hybridlb~ e consegue \textit{speedup} de $6$ com $2.048$ \textit{núcleos} e $145$ com $8.192$ \textit{núcleos} em relação a versão sequencial~\cite{zheng2010}. 
+
+Por outro lado, estratégias centralizadas efetuam decisões de balanceamento de carga em um único processador. Para tanto, os dados de carga e comunicação de todas as tarefas são acumulados em um processador específico, o qual executa um processo de decisão com base nessas informações.
+Neste tipo de estratégia pode-se citar os balanceadores \greedylb~ e \refinelb.
+O primeiro, adota uma abordagem de agendamento agressivo, empregando uma heurística gulosa para tomada de decisões.  Seu algoritmo objetiva migrar objetos pesados para o núcleo com menor carga, repetindo até que a carga de todos os processadores alcance uma proximidade com a carga média.
+Já o segundo, toma suas decisões considerando a distribuição de carga atual dos núcleos utilizados. A proposta é mover tarefas dos núcleos mais sobrecarregados para os menos carregados almejando atingir uma média, limitando o número do tarefas migradas~\cite{zheng2011periodic}. 
+
+Outras ainda, chamadas de estratégias distribuídas visam melhorar o desempenho de sistemas de grande escala. Nessas estratégias, os processadores trocam informações apenas entre os seus vizinhos, como forma de descentralizar o processo de balanceamento de carga e apresentar menor sobrecarga de balanceamento de carga do que estratégias centralizadas~\cite{Kale:1993:CPC:165854.165874}.
+Neste tipo de balanceador pode-se citar os balanceadores \grapelb~ e \grapepluslb.
+Este algoritmos realizam em paralelo, o cálculo da carga média de cada processador, sendo este valor médio usado para definir o estado global do sistema~\cite{menon2013distributed}.

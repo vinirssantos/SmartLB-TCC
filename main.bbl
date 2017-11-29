@@ -1,0 +1,176 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Acun et al. 2014]{acun2014parallel}
+\abntrefinfo{Acun et al.}{ACUN et al.}{2014}
+{ACUN, B. et al. Parallel programming with migratable objects: Charm++ in
+  practice. In:  IEEE PRESS. \textbf{Proceedings of the International
+  Conference for High Performance Computing, Networking, Storage and Analysis}.
+  [S.l.], 2014. p. 647--658.}
+
+\bibitem[Arruda 2015]{arruda2015balanceamento}
+\abntrefinfo{Arruda}{ARRUDA}{2015}
+{ARRUDA, G. H.~S. Balanceamento de carga em sistemas multiprocessadores
+  utilizando o modelo de programa{\c{c}}{\~a}o charm++.
+2015.}
+
+\bibitem[Components of a Charm++ Program 2017]{compileIMG}
+\abntrefinfo{Components\ldots}{COMPONENTS\ldots}{2017}
+{COMPONENTS of a Charm++ Program. 2017.
+  \url{http://charmplusplus.org/tutorial/CharmComponents.html}.
+Acessado em: 23/11/2017.}
+
+\bibitem[Hendrickson e Devine 2000]{hendrickson2000dynamic}
+\abntrefinfo{Hendrickson e Devine}{HENDRICKSON; DEVINE}{2000}
+{HENDRICKSON, B.; DEVINE, K. \textbf{Dynamic load balancing in computational
+  mechanics}.
+\textbf{Computer methods in applied mechanics and engineering}, Elsevier,
+  v.~184, n.~2, p. 485--500, 2000.}
+
+\bibitem[Huang, Lawlor e Kale 2003]{huang2003adaptive}
+\abntrefinfo{Huang, Lawlor e Kale}{HUANG; LAWLOR; KALE}{2003}
+{HUANG, C.; LAWLOR, O.; KALE, L.~V. Adaptive mpi. In:  SPRINGER.
+  \textbf{International workshop on languages and compilers for parallel
+  computing}. [S.l.], 2003. p. 306--322.}
+
+\bibitem[Kale 1993]{kale1993parallel2}
+\abntrefinfo{Kale}{KALE}{1993}
+{KALE, L. Parallel programming with charm: An overview.
+\textbf{Dept. of Computer Science, University of Illinois at Urbana-Champaign,
+  Tech. Rep}, p. 93--8, 1993.}
+
+\bibitem[Kale et al. 1995]{Kale95thecharm}
+\abntrefinfo{Kale et al.}{KALE et al.}{1995}
+{KALE, L. et al. \textbf{The Charm Parallel Programming Language and System:
+  Part I - Description of Language Features}. 1995.}
+
+\bibitem[Kal{\'e} e Krishnan 1993]{Kale:1993:CPC:165854.165874}
+\abntrefinfo{Kal{\'e} e Krishnan}{KAL{\'E}; KRISHNAN}{1993}
+{KAL{\'E}, L.~V.; KRISHNAN, S. {CHARM++}: A portable concurrent object oriented
+  system based on {C++}. In:  ANNUAL CONFERENCE ON OBJECT-ORIENTED PROGRAMMING
+  SYSTEMS, LANGUAGES, AND APPLICATIONS (OOPSLA). \textbf{Proceedings...}
+  [S.l.]: ACM, 1993. p. 91--108.
+ISBN 0-89791-587-9.}
+
+\bibitem[Kale e Krishnan 1993]{kale1993charm++}
+\abntrefinfo{Kale e Krishnan}{KALE; KRISHNAN}{1993}
+{KALE, L.~V.; KRISHNAN, S. Charm++: a portable concurrent object oriented
+  system based on c++. In:  ACM. \textbf{ACM Sigplan Notices}. [S.l.], 1993.
+  v.~28, n.~10, p. 91--108.}
+
+\bibitem[Kunzman et al. 2006]{kunzman2006charm++}
+\abntrefinfo{Kunzman et al.}{KUNZMAN et al.}{2006}
+{KUNZMAN, D. et al. Charm++, offload api, and the cell processor.
+\textbf{Urbana}, v.~51, p. 61801, 2006.}
+
+\bibitem[Menon e Kal{\'e} 2013]{menon2013distributed}
+\abntrefinfo{Menon e Kal{\'e}}{MENON; KAL{\'E}}{2013}
+{MENON, H.; KAL{\'E}, L. A distributed dynamic load balancer for iterative
+  applications. In:  INTERNATIONAL CONFERENCE FOR HIGH PERFORMANCE COMPUTING,
+  NETWORKING, STORAGE AND ANALYSIS (SC), Denver, CO. \textbf{Proceedings...}
+  [S.l.]: ACM, 2013. p.~15.}
+
+\bibitem[Padoin et al. 2014]{padoin2014saving}
+\abntrefinfo{Padoin et al.}{PADOIN et al.}{2014a}
+{PADOIN, E.~L. et al. Saving energy by exploiting residual imbalances on
+  iterative applications. In:  IEEE. \textbf{High Performance Computing (HiPC),
+  2014 21st International Conference on}. [S.l.], 2014. p. 1--10.}
+
+\bibitem[Padoin et al. 2014]{padoin2014balanceamento}
+\abntrefinfo{Padoin et al.}{PADOIN et al.}{2014b}
+{PADOIN, E.~L. et al. Balanceamento de carga visando redu{\c{c}}ao do consumo
+  de energia para o modelo de programa{\c{c}}ao charm++.
+\textbf{XIV Escola Regional de Alto Desempenho do Estado do Rio Grande do Sul,
+  Alegrete, RS, Brasil}, 2014.}
+
+\bibitem[Padoin, Navaux e Méhaut 2017]{padoin2017ICCS}
+\abntrefinfo{Padoin, Navaux e Méhaut}{PADOIN; NAVAUX; MéHAUT}{2017}
+{PADOIN, E.~L.; NAVAUX, P. O.~A.; MéHAUT, J.-F. Using power demand and
+  residual load imbalance in the load balancing to save energy of parallel
+  systems. In:  \textbf{International Conference on Computational Science
+  (ICCS)}. Zurich, Switzerland: [s.n.], 2017. p.~1--8.}
+
+\bibitem[Philippsen e Zenger 1997]{philippsen1997javaparty}
+\abntrefinfo{Philippsen e Zenger}{PHILIPPSEN; ZENGER}{1997}
+{PHILIPPSEN, M.; ZENGER, M. Javaparty - transparent remote objects in java.
+\textbf{Concurrency Practice and Experience}, Chichester, Sussex: J. Wiley,
+  c1989-c2000., v.~9, n.~11, p. 1225--1242, 1997.}
+
+\bibitem[Pilla e Meneses 2015]{pilla2015programaccao}
+\abntrefinfo{Pilla e Meneses}{PILLA; MENESES}{2015a}
+{PILLA, L.~L.; MENESES, E. Analise de desempenho da paralelização do problema
+  de caixeiro viajante.
+\textbf{XV Escola Regional de Alto Desempenho do Estado do Rio Grande do Sul,
+  Gramado, RS, Brasil}, 2015.}
+
+\bibitem[Pilla e Meneses 2015]{pilla2015programaccao2}
+\abntrefinfo{Pilla e Meneses}{PILLA; MENESES}{2015b}
+{PILLA, L.~L.; MENESES, E. Programa{\c{c}}{\~a}o paralela em charm++.
+\textbf{XV Escola Regional de Alto Desempenho do Estado do Rio Grande do Sul,
+  Gramado, RS, Brasil}, 2015.}
+
+\bibitem[Pilla et al. 2014]{pilla2014topology}
+\abntrefinfo{Pilla et al.}{PILLA et al.}{2014}
+{PILLA, L.~L. et al. A topology-aware load balancing algorithm for clustered
+  hierarchical multi-core machines.
+\textbf{Future Generation Computer Systems}, Elsevier, v.~30, p. 191--201,
+  2014.}
+
+\bibitem[Pilla et al. 2011]{pillaNatalRN}
+\abntrefinfo{Pilla et al.}{PILLA et al.}{2011}
+{PILLA, L.~L. et al. Avalia{\c{c}} ao da adequa{\c{c}} ao da plataforma charm++
+  para arquiteturas multicore com mem{\'o}ria hier{\'a}rquica.
+\textbf{X Workshop em Desempenho de Sistemas Computacionais e de
+  Comunica{\c{c}} ao, Natal, RN, Brasil}, 2011.}
+
+\bibitem[Pinho 2012]{pinho2012linguagem}
+\abntrefinfo{Pinho}{PINHO}{2012}
+{PINHO, E.~G.
+\textbf{Uma linguagem de programa{\c{c}}{\~a}o paralela orientada a objetos
+  para arquiteturas distribu{\'\i}das}.
+Tese (Doutorado), 2012.}
+
+\bibitem[Pinho e Junior 2010]{pinholanguage}
+\abntrefinfo{Pinho e Junior}{PINHO; JUNIOR}{2010}
+{PINHO, E.~G.; JUNIOR, F.~H. de C. A language for object-oriented parallel
+  programming targeted at cluster computing platforms.
+\textbf{14th Brazilian Symposium on Programming Languages}, SBC, 2010.}
+
+\bibitem[Santos et al. 2017]{viniciusWSCAD2017}
+\abntrefinfo{Santos et al.}{SANTOS et al.}{2017}
+{SANTOS, V. R.~S. D. et al. Proposta de balanceamento de carga para
+  redu{\c{c}}{\~a}o do tempo de execu{\c{c}}{\~a}o de aplica{\c{c}}{\~o}es em
+  ambientes multiprocessados.
+\textbf{XVIII Simpósio em Sistemas Computacionais de Alto Desempenho
+  (WSCAD-WIC)}, 2017.}
+
+\bibitem[Santos e Padoin 2017]{artigoSalao2017}
+\abntrefinfo{Santos e Padoin}{SANTOS; PADOIN}{2017}
+{SANTOS, V. R.~S. D.; PADOIN, E.~L. An{\'a}lise de desempenho da
+  aplica{\c{c}}{\~a}o de balanceamento de carga em sistemas multiprocessadores.
+\textbf{Sal{\~a}o do Conhecimento 2017 - Ijuí RS}, v.~3, n.~3, 2017.}
+
+\bibitem[Zheng et al. 2011]{zheng2011periodic}
+\abntrefinfo{Zheng et al.}{ZHENG et al.}{2011}
+{ZHENG, G. et al. Periodic hierarchical load balancing for large
+  supercomputers.
+\textbf{International Journal of High Performance Computing Applications}, SAGE
+  Publications, v.~25, n.~4, p. 371--385, 2011.}
+
+\bibitem[Zheng et al. 2010]{zheng2010}
+\abntrefinfo{Zheng et al.}{ZHENG et al.}{2010a}
+{ZHENG, G. et al. Hierarchical load balancing for charm++ applications on large
+  supercomputers. In:  IEEE. \textbf{Parallel Processing Workshops (ICPPW),
+  2010 39th International Conference on}. [S.l.], 2010. p. 436--444.}
+
+\bibitem[Zheng et al. 2010]{zheng2010hierarchical}
+\abntrefinfo{Zheng et al.}{ZHENG et al.}{2010b}
+{ZHENG, G. et al. Hierarchical load balancing for charm++ applications on large
+  supercomputers. In:  IEEE. \textbf{Parallel Processing Workshops (ICPPW),
+  2010 39th International Conference on}. [S.l.], 2010. p. 436--444.}
+
+\end{thebibliography}

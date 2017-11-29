@@ -1,0 +1,112 @@
+\subsection{Arquitetura dos Dispositivos de Armazenamento}
+
+Apesar de serem as unidades de processamento, as maiores responsáveis pelo consumo energético dos sistemas HPC, as unidades de armazenamento correspondem também por grande parte deste consumo. Isso ocorre devido às operações de entrada e saída (E/S) sofrerem variações conforme as arquiteturas de cada dispositivo, com base nos fatores de desempenho relacionados aos tempos de acessos sequenciais e aleatórios \cite{welch2013optimizing}.
+
+\subsubsection{Hard Disk Drive - HDD}
+
+O HDD consiste em um dispositivos utilizado para armazenamento de dados. Também é conhecido por somente HD ou Disco Rígido, devido ao fato dos dados serem gravados em discos magnéticos chamados \textit{platters}, que são formados por discos extremamente rígidos que garantem a qualidade de gravação e leitura \citeonline{hdd}. Na Figura \ref{fig:hdd} é possível visualizar a estrutura de um Disco Rígido.
+
+\begin{figure}[htb]
+	\caption{\label{fig:hdd}Disco Rígido}
+	\begin{center}
+	    \includegraphics[scale=1]{figuras/hdd.jpg}
+	\end{center}
+	\legend{Fonte: \cite{hdd}}
+\end{figure}
+
+Segundo os autores \cite{tanenbaum2009sistemas}, este dispositivo possui sua arquitetura organizada em cilindros (disco magnéticos), sendo que cada cilindro é estruturado em trilhas, que por sua vez são divididas em setores. Em geral todos os setores tem o mesmo tamanho, o qual varia entre 512 bytes a 4.096 bytes. A criação de trilhas e de setores é realizado pelo próprio fabricante do disco sendo chamado de formatação física \cite[Pg. 137]{oliveira2009sistemas}.
+
+A capacidade total de armazenamento de um HD pode ser calculada, conforme os autores \cite{oliveira2009sistemas}, realizando a multiplicação de cabeças x número de cilindros x número de setores x tamanho do setor, onde os cilindros correspondem aos números de trilhas, e as cabeças correspondem ao número de superfícies graváveis.
+
+De acordo com os autores \cite{tanenbaum1995sistemas}, para acessar um determinado dado no HD, primeiramente localiza-se o setor e trilha de onde o dado será enfim lido. Este procedimento resulta no chamado tempo de acesso, como podemos observar na  Figura \ref{fig:hd2}, que pode ser influenciado por três fatores: 
+
+\begin{itemize}
+\item \textbf{Tempo de Seek (Seek time):} Tempo necessário para posicionar o cabeçote de leitura/escrita na trilha desejada.
+
+\item \textbf{Tempo de Latência (Latency time):} Tempo necessário para atingir o início do setor a ser lido ou escrito. Este fator é definido pela velocidade de rotação do motor do dispositivo.
+
+
+\item \textbf{Tempo de Transferência (Transfer time):} Tempo efetivo para leitura ou escrita
+dos dados.
+\end{itemize}
+
+\begin{figure}[htb]
+	\caption{\label{fig:hd2}Tempo de Acesso}
+	\begin{center}
+	    \includegraphics[scale=1]{figuras/hd2.jpg}
+	\end{center}
+	\legend{Fonte: \cite[Pg. 88]{oliveira2009sistemas}}
+\end{figure}
+
+
+
+\subsubsection{Solid State Drive - SSD}
+
+SSD é a sigla para Solid-State Drive, em tradução livre significa "Unidade de Estado Sólido".  Consite em um dispositivo de armazenamento de dados que possui a mesma função que os HDs, citados anteriormente.
+
+Possui esta nomenclatura em referência à utilização de material sólido para transporte de sinais elétricos entre transístores. Conforme pode ser observado a estrutura de um SSD através da Figura \ref{fig:ssd2}, o armazenamento de dados é feito de forma persistente em um ou mais chips de memória não volátil e não permanente (memória flash), dispensando totalmente o uso de sistemas mecânicos para o seu funcionamento. Em virtude disso, os dispositivos de armazenamento SSD possuem uma velocidade muito maior com relação aos dispositivos HDD, e consequentemente apresentam maior economia no consumo de energia \cite{ssd}.
+
+\begin{figure}[htb]
+	\caption{\label{fig:ssd2}Estrutura Interna de um SSD}
+	\begin{center}
+	    \includegraphics[scale=0.4]{figuras/ssd.jpg}
+	\end{center}
+	\legend{Fonte: \cite{ssd2}}
+\end{figure}
+
+
+A memória flash guarda todos os arquivos e, devido as operações serem feitas eletricamente, isso torna as operações de leitura e escrita mais rápidas. Ela pode trabalhar de dois modos: síncrona e assíncrona. A memória síncrona é mais cara e oferece melhor desempenho para manipular dados que não podem ser comprimidos. Já a memória assíncrona é mais barata e não possui uma performance tão boa para gravar dados que não podem ser comprimidos \cite{ssd2}.
+
+\begin{figure}[htb]
+	\caption{\label{fig:micheloni2012inside}Diagrama de bloco de um SSD}
+	\begin{center}
+	    \includegraphics[scale=0.8]{figuras/ssd2.jpg}
+	\end{center}
+	\legend{Fonte: \cite{micheloni2012inside}}
+\end{figure}
+
+
+Assim como os HDs, SSDs também possuem controladores. O controlador é uma espécie de processador e, é responsável por diversas funções como intermediar a troca de dados entre o computador e a memória Flash, gerenciar as operações de leitura e escrita, detectar e corrigir erros, entre outras tarefas \cite{ssd}. Através da Figura \ref{fig:micheloni2012inside} é possível observarmos as conexões da arquitetura dos SSDs. 
+
+Conforme o autor \cite{ssd}, nos diz que:
+
+\begin{citacao}
+Como os controladores dos SSDs precisam lidar com grandes volumes dados, eles contam com recursos que permitem ou facilitam esse trabalho, como memórias dedicadas que funcionam como cache e algoritmos de compressão de dados que tornam as operações mais rápidas e prolongam a vida útil da unidade.
+\end{citacao}
+
+Conforme a Figura \ref{fig:ssd3} os endereços do SSDs são organizados em páginas de 4 KB, que são então agrupadas em blocos de 512 KB. Cada página pode armazenar somente um arquivo ou fragmento de arquivo. Dois arquivos não podem compartilhar a mesma página, o que faz com que arquivos com menos de 4 KB ocupem uma página inteira, ocasionando assim um desperdício de espaço. 
+
+Este não chega a ser um grande problema, pois a maioria dos sistemas de arquivos utilizam setores de 4 KB. O maior problema é a questão dos blocos e das operações de escrita, onde o controlador é capaz de acessar as páginas de forma independente, lendo e gravando dados. Em um chip de memória MLC típico uma operação de leitura demora 50 microssegundos (0.05 ms) e uma operação de escrita demora 900 microssegundos. Isso explica a diferença entre o desempenho de leitura e escrita dos SSDs \cite{ssd3}.
+
+\begin{figure}[htb]
+	\caption{\label{fig:ssd3}Bloco SSD}
+	\begin{center}
+	    \includegraphics[scale=0.7]{figuras/ssd3.jpg}
+	\end{center}
+	\legend{Fonte: \cite{ssd3}}
+\end{figure}
+
+Atualmente existe três tipos de tecnologia empregadas em memórias Flash: SLC, MLC e TLC \cite{ssd}.
+\begin{itemize}
+\item \textbf{Single-Level Cell (SLC) -} armazena um bit em cada célula. Para efeito de comparação os chips SLC, suportam por padrão, cerca de cem mil operações de escrita por célula contra dez mil do MLC.
+
+\item \textbf{Multi-Level Cell (MLC) -} utiliza tensões diferenciadas que fazem com que uma célula de memória armazene dois bits. 
+
+\item \textbf{Triple-Level Cell (TLC) -} podem armazenar até 3 bits em cada uma de suas células de memória, o que resulta em um considerável ganho de espaço de armazenamento. Porém, torna-se assim uma tecnologia mais lenta comparada as tecnologias SLC e MLC.
+\end{itemize}
+
+Além disso, mais recentemente, passou a ser empregada nos dispositivos SSD uma interessante funcionalidade denominada como \textit{TRIN}. Trata-se de um recurso que consiste em “zerar"  as páginas de arquivos apagados, pois diferentemente dos HDDs, os blocos de dados não podem simplesmente ser gravados e, posteriormente regravados.
+
+Inicialmente era necessário primeiro apagar os dados de uma área gravada, fazendo-a retornar ao seu estado original, para somente depois inserir dados novamente. O TRIM permite ao sistema operacional agendar a limpeza das páginas cujo conteúdo foi deletado ou movido em vez de simplesmente marcá-las como vagas, o que evita a perda de desempenho do SSD \cite{ssd3}.
+
+
+
+
+
+
+
+
+
+
+
+

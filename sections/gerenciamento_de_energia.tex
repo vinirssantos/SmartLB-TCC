@@ -1,0 +1,33 @@
+\section{Técnicas de Gerenciamento de Energia}
+Atualmente, pesquisas voltadas à Computação de Alto Desempenho têm buscado soluções que considerem, além do desempenho, o consumo de energia durante a execução de aplicações. A utilização de técnicas de gerenciamento de energia aplicadas ao hardware consiste em uma estratégia adotada para reduzir este consumo.
+
+Segundo o autor \cite{beloglazov2011taxonomy}, dentre as técnicas utilizadas, podem ser classificadas como SPM (static power management), às quais aplicam melhorias permanentes, tendo como base principal, o desenvolvimento e utilização de componentes mais eficientes, e também como DPM (dynamic power management), que aplicam medidas temporárias baseadas no conhecimento em tempo real do uso dos recursos e da carga de trabalho.
+
+ As técnicas utilizadas em gerenciamento de energia dinâmico - DPM são DCD (dynamic component deativation), que consiste na ação de desligar componentes nos períodos de inatividade, \textit{sleep state} , e DPS (dynamic performance scaling), que consiste em reduzir gradualmente o desempenho quando a demanda diminui \cite{beloglazov2011taxonomy}. 
+
+Estas tecnologias permitem criar dispositivos denominados \textit{Energy Aware}, que implementam a estratégia conhecida como computação proporcional, ou seja, dispositivos que apresentam um consumo de energia proporcional ao seu nível de utilização, basenado-se, principalmente, na tecnologia DVFS e no padrão ACPI \cite{westphall2013principios}.
+
+\subsection{DVFS}
+De acordo com o autor \cite{rizvandi2012multiple}, A técnica DVFS (Dynamic Voltage and Frequency Scaling) é uma técnica moderna para reduzir o consumo de energia em microprocessadores ou controlar o calor gerado pelo circuito. Esta técnica geralmente é utilizada em dispositivos portáteis, como notebooks e celulares, pois nestes equipamentos, diminuir o consumo de energia da bateria é necessário. Além disso, DVFS é utilizada na área de Alto Desempenho, para diminuir o processamento dos nós e assim reduzir energia ou esfriá-los.
+
+Além disso, segundo estudos realizados por \cite{feng2005power}, com o benchmark SPEC CPU2000, o consumo de energia de uma CPU (Central Processing Unit) de um nodo durante a execução corresponde a aproximadamente 35\% do total da energia consumida por esse nodo. No entanto, quando o nodo está ocioso, o consumo de energia da CPU é reduzido para 15\%. O restante do consumo é dividido entre outros componentes do equipamento, como memória, coolers, fonte de alimentação, interface de rede, disco e chipset \cite{lara2013resoluccao}.
+
+Existem bibliotecas e pacotes que permitem o uso de técnica DVFS em computadores, tais como: \textit{cpufrequtils, cpupower, powernowd, cpudyn, cpufreqd}, entre outras. Este trabalho destaca o pacote \textit{cpufrequtils}.
+
+Para fazer uso da técnica DVFS em ambientes Linux pode-se instalar o pacote cpufrequtils (conhecido também como CPU-Freq), cujo qual é possível realizar a alteração da frequência dos processadores. Através deste pacote é possível alterar também os governadores do processador, que controlam a política de frequência do processador \cite{lara2013resoluccao}.
+
+Conforme o autor \cite{cpufreqintel}, cpufreq trata-se de um subsistema do kernel do Linux, que permite definir explicitamente velocidades do clock de frequencias em processadores. Vários  trabalhos recentemente resultaram em avanços de uma modularização da arquitetura de cpufreq kernel genérico. A figura xxx mostra a arquitetura cpufreq do kernel2.6.8 em um alto nível:
+
+\begin{figure}[htb]
+	\caption{\label{fig:cpufreq}Arquitetura cpufreq do kernel 2.6.8 em alto nível}
+	\begin{center}
+	    \includegraphics[scale=1]{figuras/cpufreq.jpg}
+	\end{center}
+	\legend{Fonte: \cite{cpufreqintel}}
+\end{figure}
+
+
+
+\subsection{ACPI}
+
+

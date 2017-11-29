@@ -1,0 +1,24 @@
+\section{Ambientes de Programação Paralela}
+\label{ambientes-de-programacao-paralela}
+Atualmente existem ambientes de programação paralela com capacidade de resolver os problemas provenientes do desbalanceamento de carga, nesta section será mostrado alguns dos principais ambientes que se encaixam nesta categoria.
+
+\subsection{PObC++}
+\label{pobc++}
+O PObC++ \cite{pinholanguage} é uma extensão paralela da linguagem de programação C++ que introduz um novo estilo de OOPP(Object Oriented Parallel Programming), que pode ser facilmente aplicável a qualquer linguagem orientada a objetos. A decisão de suportar C++ vem da ampla aceitação da linguagem em alguns nichos HPC. A premissa principal que guiou o estilo do PObC++ foi a preservação dos princípios básicos de orientação de objeto ao mesmo tempo que introduziu um estilo de programação muito próximo ao MPI. Portanto, propomos uma idéia em que os objetos intrinsecamente paralelos distinguem a interação do processo de passagem de mensagem (intra-objeto), usando a comunicação baseada em canal, a partir da passagem de mensagem de coordenação de objeto (interobject), geralmente feita por chamada de método.
+
+\subsection{JavaParty}
+\label{javaparty}
+De acordo com ~\cite{pinho2012linguagem}, JavaParty é uma extensão das capacidades da linguagem Java para trabalhar com computação distribuída. Classes em JavaParty podem ser declaradas como remotas. Assim, objetos remotos são acessíveis, no ambiente JavaParty, em qualquer parte do sistema. O principal ganho ao usa-la no lugar da linguagem Java é a possibilidade de trabalhar transparentemente com objetos remotos.
+	
+Um programa Java multi-threaded pode facilmente ser transformado em um programa distribuído JavaParty, identificando as classes e threads que devem ser espalhados pelo ambiente distribuído. O programador indica isso por um modificador de classe introduzido recentemente. O novo modificador é a única extensão do Java. Como os tópicos de Java são objetos de uma classe de thread, os tópicos remotos podem ser criados como objetos de uma classe de thread remota. Não há necessidade de reescrever ou reorganizar significativamente um determinado programa Java.~\cite{philippsen1997javaparty}.
+
+\subsection{AMPI}	
+\label{ampi}
+O  Adaptative MPI~\cite{huang2003adaptive} foi desenvolvido em CHARM ++ e usa suas facilidades de comunicação, estratégias de balanceamento de carga e modelo de threading.
+O CHARM ++ usa um modelo baseado em objetos: os programas consistem em uma coleção de objetos orientados por mensagem, mapeados para processadores físicos pelo sistema de tempo de execução CHARM ++. Os objetos se comunicam com outros objetos invocando um método de entrada assíncrona no objeto remoto. Em cada uma dessas conexões assíncronas, uma mensagem é gerada e enviada para o processador de destino onde o objeto remoto reside. Adaptive MPI implementa seus processadores MPI como CHARM++ threads "nível de usuário" vinculados a CHARM ++ comunicando objetos.
+A passagem de mensagens entre os processadores virtuais AMPI é implementada como comunicação entre esses objetos CHARM ++ e as mensagens subjacentes, que são tratadas pelo sistema de tempo de execução. Mesmo com a migração de objetos, o CHARM ++ suporta roteamento e encaminhamento eficientes das mensagens.
+
+\subsection{CHARM++}
+\label{charm-subsection}
+O Charm ++ ~\cite{kunzman2006charm++} é um paradigma de passagem de mensagens assíncronas. O programa é dividido em objetos chamados de chares. Cada chare, individualmente, faz uma parte da computação geral. Eles passam mensagens entre si para coordenar e executar a computação inteira. Cada chare tem um ou mais métodos de entrada. Basicamente, os métodos de entrada são funções de membros que atuam como pontos de recebimento de mensagens. Quando um chare envia uma mensagem para outro chare, ele especifica tanto a mensagem quanto o método de entrada que receberá a mensagem, como se apenas estivesse fazendo uma chamada de função de membro normal no objeto chare de recebimento. Os próprios chares estão espalhados por todos os processadores durante a execução de um programa Charm ++. Normalmente, existem muitos chares por processador. Cada processador possui um sistema de tempo de execução Charm ++ que controla a execução, balanceamento de carga, envio e recebimento de mensagens entre outras funções, para todos os chares localizados nesse processador.
+%Charm++ é basicamente C++ sem suas variaveis globais, e com algumas extenções que suportam execução paralela. Operações e manipulações de chares são restritos, em comparação com objetos sequenciais, para se adequear aos requisitos da execução paralela~\cite{kale1993charm++}.

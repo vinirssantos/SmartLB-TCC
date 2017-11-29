@@ -1,0 +1,16 @@
+\section{Benchmark de IO}
+Benchmark é um conceito que se originou e tornou-se popular no universo corporativo, mas que posteriormente acabou ganhando grande destaque na informática. No meio empresarial, o benchmark – ou benchmarking – consiste no ato de efetuar uma análise realizando a comparação entre mecanismos utilizados nas empresas, como processos, objetos e resultados, com a finalidade de verificar qual tipo de modelo de negócio funciona melhor para determinado serviço, dentre outras coisas. 
+
+Já na computação, o termo é associado à ação de avaliar características e comparar performance e desempenho relativo à hardware ou software. Com o avanço tecnológico ficou cada vez mais difícil comparar a performance de sistemas diferentes apenas observando suas especificações. Em virtude disso, uma série de testes padrões e ensaios foram desenvolvidos para serem realizados em sistemas distintos, sendo possível comparar os resultados mesmo que os ambientes envolvidos possuam arquiteturas diferentes \cite{benchmark}.
+
+\begin{figure}[htb]
+	\caption{\label{fig:iozone}Gráfico de performance de leitura gerado pelo IOzone Filesystem Benchmark}
+	\begin{center}
+	    \includegraphics[scale=0.9]{figuras/benchmark.jpg}
+	\end{center}
+	\legend{Fonte: \cite{iozone}}
+\end{figure}
+
+Existem dois tipos de testes de benchmark: o sintético e o de aplicação. O benchmark sintético utiliza programas que estimulam os componentes a terem certo tipo de comportamento ou ação. Já o benchmark de aplicação executa programas em cenários simulando o mundo real, executando as funções no máximo da capacidade do componente, para extrair todo o seu potencial \cite{benchmark_2}.
+
+O IOzone é uma ferramenta de benchmark de sistema de arquivos capaz de gerar e medir uma variedade de operações de arquivos, como pode ser visto através da Figura \ref{fig:iozone}. Além de ser multi-plataforma, consiste em uma ferramenta útil para executar uma ampla análise e desempenho de E/S através das seguintes operações:\textit{ Read, write, re-read, re-write, read backwards, read strided, fread, fwrite, random read, pread, mmap, aio\_read, aio\_write } \cite{iozone}.
