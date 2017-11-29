@@ -29,25 +29,25 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {SmartLB}}{22}{chapter.3}
 \contentsline {section}{\numberline {3.1}Proposta}{22}{section.3.1}
-\contentsline {section}{\numberline {3.2}Implementa\IeC {\c c}\IeC {\~a}o}{22}{section.3.2}
-\contentsline {section}{\numberline {3.3}Estrat\IeC {\'e}gia de tomada de decis\IeC {\~a}o}{22}{section.3.3}
+\contentsline {section}{\numberline {3.2}Metodologias de Implementa\IeC {\c c}\IeC {\~a}o}{22}{section.3.2}
+\contentsline {section}{\numberline {3.3}Algoritmo}{23}{section.3.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Metodologia}}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ambiente de Programa\IeC {\c c}\IeC {\~a}o Charm ++}{23}{section.4.1}
-\contentsline {section}{\numberline {4.2}Benchmarks}{23}{section.4.2}
-\contentsline {section}{\numberline {4.3}Hardware Utilizado}{23}{section.4.3}
-\contentsline {section}{\numberline {4.4}Considera\IeC {\c c}\IeC {\~o}es do Cap\IeC {\'\i }tulo}{23}{section.4.4}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Metodologia}}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ambiente de Programa\IeC {\c c}\IeC {\~a}o Charm ++}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Benchmarks}{25}{section.4.2}
+\contentsline {section}{\numberline {4.3}Hardware Utilizado}{25}{section.4.3}
+\contentsline {section}{\numberline {4.4}Considera\IeC {\c c}\IeC {\~o}es do Cap\IeC {\'\i }tulo}{25}{section.4.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Resultados }}{24}{chapter.5}
-\contentsline {section}{\numberline {5.1}Desempenho X DVFS}{24}{section.5.1}
-\contentsline {section}{\numberline {5.2}Demanda de Pot\IeC {\^e}ncia X DVFS}{24}{section.5.2}
-\contentsline {section}{\numberline {5.3}Custo Energ\IeC {\'e}tico}{24}{section.5.3}
-\contentsline {section}{\numberline {5.4}An\IeC {\'a}lise dos Resultados}{24}{section.5.4}
-\contentsline {section}{\numberline {5.5}Compara\IeC {\c c}\IeC {\~a}o com Trabalhos Relacionados}{24}{section.5.5}
-\contentsline {section}{\numberline {5.6}Considera\IeC {\c c}\IeC {\~o}es do Cap\IeC {\'\i }tulo}{24}{section.5.6}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Resultados }}{26}{chapter.5}
+\contentsline {section}{\numberline {5.1}Desempenho X DVFS}{26}{section.5.1}
+\contentsline {section}{\numberline {5.2}Demanda de Pot\IeC {\^e}ncia X DVFS}{26}{section.5.2}
+\contentsline {section}{\numberline {5.3}Custo Energ\IeC {\'e}tico}{26}{section.5.3}
+\contentsline {section}{\numberline {5.4}An\IeC {\'a}lise dos Resultados}{26}{section.5.4}
+\contentsline {section}{\numberline {5.5}Compara\IeC {\c c}\IeC {\~a}o com Trabalhos Relacionados}{26}{section.5.5}
+\contentsline {section}{\numberline {5.6}Considera\IeC {\c c}\IeC {\~o}es do Cap\IeC {\'\i }tulo}{26}{section.5.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclus\IeC {\~a}o }}{25}{chapter.6}
-\contentsline {section}{\numberline {6.1}Trabalhos Futuros}{25}{section.6.1}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclus\IeC {\~a}o }}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Trabalhos Futuros}{27}{section.6.1}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{26}{section*.12}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{28}{section*.12}

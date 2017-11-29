@@ -1,0 +1,69 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: abntex2-alf.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: abntex2-options.bib
+Database file #2: bibliografia.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Too many commas in name 4 of "Dos Santos, Vinicius Ribas Samuel and Machado, Ana K M and Padoin, Edson L and Navaux, Philippe O A, M{\'E}auth, Jean-Fran{\c{c}}ois" for entry viniciusWSCAD2017
+while executing---line 2091 of file abntex2-alf.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Warning--faltando school em pinho2012linguagem
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://www.abntex.net.br/                               |
++---------------------------------------------------------+
+You've used 29 entries,
+            6714 wiz_defined-function locations,
+            1353 strings with 15404 characters,
+and the built_in function-call counts, 24848 in all, are:
+= -- 2041
+> -- 944
+< -- 35
++ -- 432
+- -- 282
+* -- 1831
+:= -- 3312
+add.period$ -- 112
+call.type$ -- 29
+change.case$ -- 339
+chr.to.int$ -- 46
+cite$ -- 28
+duplicate$ -- 1093
+empty$ -- 1806
+format.name$ -- 1373
+if$ -- 5992
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 496
+newline$ -- 134
+num.names$ -- 130
+pop$ -- 685
+preamble$ -- 1
+purify$ -- 124
+quote$ -- 0
+skip$ -- 1432
+stack$ -- 1
+substring$ -- 941
+swap$ -- 522
+text.length$ -- 28
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 14
+warning$ -- 1
+while$ -- 202
+width$ -- 0
+write$ -- 438
+(There was 1 error message)

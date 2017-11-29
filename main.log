@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.10)  29 NOV 2017 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.10)  29 NOV 2017 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1356,14 +1356,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ]) (./sections/case_study/ambientOfProgramming.tex [15])
 (./sections/case_study/charm.tex [16] [17]
-<figuras/chares.png, id=262, 848.16875pt x 419.5675pt>
+<figuras/chares.png, id=268, 848.16875pt x 419.5675pt>
 File: figuras/chares.png Graphic file (type png)
 <use figuras/chares.png>
 Package pdftex.def Info: figuras/chares.png  used on input line 22. on input li
 ne 22.
 Package pdftex.def Info: Requested size: 254.45258pt x 125.87122pt on input lin
 e 22.
-<figuras/message.png, id=275, 573.14125pt x 230.8625pt>
+<figuras/message.png, id=281, 573.14125pt x 230.8625pt>
 File: figuras/message.png Graphic file (type png)
 <use figuras/message.png>
 Package pdftex.def Info: figuras/message.png  used on input line 41. on input l
@@ -1376,7 +1376,7 @@ Overfull \hbox (3.51363pt too wide) in paragraph at lines 41--44
  []
 
 [18 <./figuras/chares.png>]
-<figuras/abstracao.png, id=293, 873.2625pt x 301.125pt>
+<figuras/abstracao.png, id=299, 873.2625pt x 301.125pt>
 File: figuras/abstracao.png Graphic file (type png)
 <use figuras/abstracao.png>
 Package pdftex.def Info: figuras/abstracao.png  used on input line 55. on input
@@ -1384,7 +1384,7 @@ Package pdftex.def Info: figuras/abstracao.png  used on input line 55. on input
 Package pdftex.def Info: Requested size: 436.63017pt x 150.56212pt on input lin
 e 55.
  [19 <./figuras/message.png> <./figuras/abstracao.png>]
-<figuras/compile.png, id=306, 1019.81pt x 272.01625pt>
+<figuras/compile.png, id=312, 1019.81pt x 272.01625pt>
 File: figuras/compile.png Graphic file (type png)
 <use figuras/compile.png>
 Package pdftex.def Info: figuras/compile.png  used on input line 67. on input l
@@ -1392,24 +1392,43 @@ ine 67.
 Package pdftex.def Info: Requested size: 407.91678pt x 108.80457pt on input lin
 e 67.
  [20 <./figuras/compile.png>])) (./sections/smartLB.tex [21]
-(./sections/metodologia/smartlb.tex
+(./sections/smartlb/smartlb.tex
+<figuras/load_balance.png, id=334, 593.21625pt x 323.2075pt>
+File: figuras/load_balance.png Graphic file (type png)
+<use figuras/load_balance.png>
+Package pdftex.def Info: figuras/load_balance.png  used on input line 14. on in
+put line 14.
+Package pdftex.def Info: Requested size: 296.60739pt x 161.60335pt on input lin
+e 14.
+ [22
 
-LaTeX Warning: Citation `jyothi2004debugging' on page 22 undefined on input lin
-e 9.
+ <./figuras/load_balance.png>]
+<figuras/smartlb_load_balance.png, id=343, 655.44875pt x 348.30125pt>
+File: figuras/smartlb_load_balance.png Graphic file (type png)
+<use figuras/smartlb_load_balance.png>
+Package pdftex.def Info: figuras/smartlb_load_balance.png  used on input line 4
+2. on input line 42.
+Package pdftex.def Info: Requested size: 262.17485pt x 139.31802pt on input lin
+e 42.
 
-)) (./sections/3-estudo_de_caso.tex [22
 
-] (./sections/metodologia/charm.tex)
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)) (./sections/3-estudo_de_caso.tex [23] [24 <./figuras/smartlb_load_balance.pn
+g>] (./sections/metodologia/charm.tex)
 (./sections/metodologia/balanceadoresDeCarga.tex)
-(./sections/metodologia/hardware.tex)) (./sections/4-resultados.tex [23
+(./sections/metodologia/hardware.tex)) (./sections/4-resultados.tex [25
 
 ]
 (./sections/desempenho_x_dvfs.tex) (./sections/demanda_de_potencia_x_dvfs.tex)
 (./sections/energia.tex) (./sections/analise_dos_resultados.tex)
-(./sections/comparacao.tex)) (./sections/5-conclusao.tex [24
+(./sections/comparacao.tex)) (./sections/5-conclusao.tex [26
 
 ]) (./main.bbl
-[25
+[27
 
 ]
 
@@ -1417,11 +1436,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-[26
+[28
 
 ]) 
 AED: lastpage setting LastPage
-[27]
+[29]
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -1438,32 +1457,30 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 309.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
  ) 
 Here is how much of TeX's memory you used:
- 17722 strings out of 492990
- 288437 string characters out of 6135004
- 442763 words of memory out of 5000000
- 20681 multiletter control sequences out of 15000+600000
- 53597 words of font info for 107 fonts, out of 8000000 for 9000
+ 17753 strings out of 492990
+ 289053 string characters out of 6135004
+ 449514 words of memory out of 5000000
+ 20699 multiletter control sequences out of 15000+600000
+ 53829 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,12n,50p,1386b,640s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share
-/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
-12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmsso12.pfb>
-Output written on main.pdf (28 pages, 381006 bytes).
+ 43i,13n,50p,1386b,640s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm
+/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
+10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on main.pdf (30 pages, 426863 bytes).
 PDF statistics:
- 552 PDF objects out of 1000 (max. 8388607)
- 501 compressed objects within 6 object streams
- 116 named destinations out of 1000 (max. 500000)
- 19341 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 583 PDF objects out of 1000 (max. 8388607)
+ 525 compressed objects within 6 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 19351 words of extra memory for PDF output out of 20736 (max. 10000000)
 

@@ -1,8 +1,11 @@
 \section{Proposta}
 A grande motivação para o desenvolvimento deste balanceador de carga proveio do desígnio da melhoria e correção de alguns problemas de um BC que utilizando uma abordagem gulosa na composição de seu algoritmo, onde trabalhava com a idéia de calcular a média aritmética do processador e com base nesse calculo então decidir qual tarefa iria ser migrada de fato. O Almejo de um ganho maior de desempenho na realização de testes com grandes cargas computacionais, dimanou na criação de um novo balanceador de carga que também utiliza uma abordagam centralizada, com uma estratégia de tomada de decisão um pouco diferente. Culminando em um ganho significativo de desempenho em relação a este BC específico e também a outros balanceadores que utilizam diferentes estratégias de tomada de decisão. O balanceador de carga em questão levou o nome de \newlb.    
 
-A escolha desta tecnica é baseada na ideia de atingir o estado de equilíbrio dos processadores rapidamente, sem partir diretamente para os chares mais carregados. Ou o uso de uma media para controlar as migrações colabora para um balanceamento de carga mais preciso, pois a migração de tarefas é um processo caro. 
+A escolha desta tecnica é baseada na ideia de atingir o estado de equilíbrio dos processadores rapidamente, sem partir diretamente para os chares mais carregados. Ou o uso de uma media para controlar as migrações colabora para um balanceamento de carga mais preciso, pois a migração de tarefas é um processo caro.
 
+\section{Implementação}
+Muitas aplicações atualmente são dinâmicas o fazem o uso de cálculos computacionais complexos. De acordo com \cite{} 
+O grande problema por trás disso é que na maioria das vezes não há uma preocupação com o desbalanceamento de carga gerado por estas aplicações, impedindo que as máquinas paralelas aproveitem todo o seu potencial [Padoin et al. 2014]
 
 A implementação do balanceador de cargas SmartLB foi realizada no ambiente deprogramação CHARM++. Este framework de balanceamento de carga foi escolhido uma vez que permite tanto a criação de um novo BC quanto a utilização dos BCs disponibilizados pelo ambiente para comparações de resultados. 
 
@@ -11,6 +14,4 @@ O CHARM++ adota uma metodologia baseada na medição das cargas das tarefas que 
 A estrategia utilizada para implementação do balanceamento de carga proposto constitui-se de melhorias nas estrategias utilizadas nos algoritmos GREEDYLB e REFINELB. Nossas melhorias buscam equilibrar as cargas entre os processadores reduzindo o número de migrações, adotando um threshold para definir o desbalanceamento de carga aceitavel. 
 
 %O BC proposto foi desenvolvido utilizando oframeworkde balanceamento de cargas disponibilizado pelo Charm++. Possui uma abordagem centralizada, o que significa que a estrutura de cargas e de comunicação da maquina, alem de um processo de tomada de decisao, ficam armazenadas em um unico ponto. A escolha de uma abordagem centralizada se deu pelo fato desta realizar um balanceamento mais preciso em relac ̧ao ̃as outras`abordagens. Apesar de trabalhar muito bem com alguns milhares de processadores, podeenfrentar problemas de escalabilidade principalmente em maquinas paralelas com pouca ́memoria.
-
-\section{Implementação}
 \section{Estratégia de tomada de decisão}
