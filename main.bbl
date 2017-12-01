@@ -12,6 +12,13 @@
   Conference for High Performance Computing, Networking, Storage and Analysis}.
   [S.l.], 2014. p. 647--658.}
 
+\bibitem[Arruda et al. 2015]{arruda2015WSCAD}
+\abntrefinfo{Arruda et al.}{ARRUDA et al.}{2015}
+{ARRUDA, G. et al. Proposta de balanceamento de carga para redução de
+  migração de processos em ambientes multiprogramados. In:  \textbf{XVI
+  Simpósio de Sistemas Computacionais (WSCAD-WIC)}. Florianópolis, SC:
+  [s.n.], 2015. p.~1--8.}
+
 \bibitem[Arruda 2015]{arruda2015balanceamento}
 \abntrefinfo{Arruda}{ARRUDA}{2015}
 {ARRUDA, G. H.~S. Balanceamento de carga em sistemas multiprocessadores
@@ -23,6 +30,12 @@
 {COMPONENTS of a Charm++ Program. 2017.
   \url{http://charmplusplus.org/tutorial/CharmComponents.html}.
 Acessado em: 23/11/2017.}
+
+\bibitem[Freitas e Pilla 2016]{torres2016}
+\abntrefinfo{Freitas e Pilla}{FREITAS; PILLA}{2016}
+{FREITAS, V. M. C.~T. de; PILLA, L.~L. Um prot{\'o}tipo de algoritmo de
+  balanceamento de carga guiado pelos pr{\'o}prios n{\'u}cleos.
+\textbf{ERAD-RS}, 2016.}
 
 \bibitem[Hendrickson e Devine 2000]{hendrickson2000dynamic}
 \abntrefinfo{Hendrickson e Devine}{HENDRICKSON; DEVINE}{2000}
@@ -168,13 +181,7 @@ Tese (Doutorado), 2012.}
   Publications, v.~25, n.~4, p. 371--385, 2011.}
 
 \bibitem[Zheng et al. 2010]{zheng2010}
-\abntrefinfo{Zheng et al.}{ZHENG et al.}{2010a}
-{ZHENG, G. et al. Hierarchical load balancing for charm++ applications on large
-  supercomputers. In:  IEEE. \textbf{Parallel Processing Workshops (ICPPW),
-  2010 39th International Conference on}. [S.l.], 2010. p. 436--444.}
-
-\bibitem[Zheng et al. 2010]{zheng2010hierarchical}
-\abntrefinfo{Zheng et al.}{ZHENG et al.}{2010b}
+\abntrefinfo{Zheng et al.}{ZHENG et al.}{2010}
 {ZHENG, G. et al. Hierarchical load balancing for charm++ applications on large
   supercomputers. In:  IEEE. \textbf{Parallel Processing Workshops (ICPPW),
   2010 39th International Conference on}. [S.l.], 2010. p. 436--444.}

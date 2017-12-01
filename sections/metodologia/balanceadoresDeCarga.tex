@@ -1,1 +1,9 @@
-\section{Benchmarks}
+\section{Balanceadores de Carga}
+Para analisar os resultados alcançados, o BC proposto foi comparado com outros três balanceadores de carga, dois deles disponíveis no \charm~ e outro cujo foi base para a criação do \newlb. Estes balanceadores são:
+\begin{itemize}
+	\item \textbf{RefineLB}: Disponibilizado juntamente com o \charm, com abordagem centralizada, o \refinelb~ é baseado em refinamento. O BC Move objetos dos core mais sobrecarregados para os menos carregados até atingir uma média, que é definida através de um método específico, limitando o número do objetos migrados \cite{arruda2015balanceamento}.
+	
+	\item \textbf{GreedyLB}: É um algoritmo de balanceamento de carga guloso, o qual remove todas as tarefas de seus núcleos e as mapeia em ordem decrescente de carga entre os núcleos com as menores cargas\cite{torres2016}. Em outras palavras a ideia central do \greedylb~ consiste na migração de objetos mais pesados para o processador coma menor carga, até que a carga de todos os processadores esteja próxima à carga média.
+		
+	\item \textbf{AverageLB}: De acordo com \cite{arruda2015WSCAD}, a estratégia utilizada para balanceamento de carga no algoritmo \averagelb~ constitui-se de uma melhoria da estratégia gulosa utilizada no algoritmo \greedylb~ o número de migrações, aumentando assim o desempenho dos sistemas de alto desempenho. A implementação utiliza uma abordagem centralizada e busca atingir balanceamento levando em consideração a média aritmética das cargas de cada processador. Foi através da necessidade de melhorias no desempenho do algoritmo do BC em questão que surgiu o \newlb.  
+\end{itemize}

@@ -1,0 +1,11 @@
+\section{Benchmarks}
+Para gerar os resultados os balanceadores de carga foram submetidos a simulações utilizando 3 benchmarks, disponibilizados pelo próprio ambiente de programação \charm. Os benchmarks escolhidos foram o LB\_test, KNeighbor e o Stencil3D, que foram configurados da seguinte forma:
+\begin{itemize}
+	\item \textbf{LB\_Test}: O benchmark está configurado para realizar 150 iterações por tarefa, com sincronização a cada 10 iterações e uma carga computacional variante entre 1000ms e 150000ms.
+	
+	\item \textbf{KNeighbor}: O benchmark foi configurado com para realizar testes com 15000 mensagens, 150 iterações por tarefa sendo que o benchmark será sincronizado a cada 10 iterações.
+	
+	\item \textbf{Stencil3D}: O benchmark foi configurado para executar com 20 blocos, realizando 150 iterações por tarefas com sincronização do benchmark a cada 10 iterações.
+\end{itemize} 
+
+Em ambos os benchmarks foram realizados testes alternando entre 50, 100 e 200 tarefas.

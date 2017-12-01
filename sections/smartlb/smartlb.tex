@@ -1,7 +1,6 @@
 \section{Proposta}
 A grande motivação para o desenvolvimento deste balanceador de carga proveio do desígnio da melhoria e correção de alguns problemas de um BC que utilizando uma abordagem gulosa na composição de seu algoritmo, onde trabalhava com a idéia de calcular a média aritmética do processador e com base nesse calculo então decidir qual tarefa iria ser migrada de fato. O Almejo de um ganho maior de desempenho na realização de testes com grandes cargas computacionais, dimanou na criação de um novo balanceador de carga que também utiliza uma abordagam centralizada, com uma estratégia de tomada de decisão um pouco diferente. Culminando em um ganho significativo de desempenho em relação a este BC específico e também a outros balanceadores que utilizam diferentes estratégias de tomada de decisão. O balanceador de carga em questão levou o nome de \newlb.    
 
-%O BC proposto foi desenvolvido utilizando oframeworkde balanceamento de cargas disponibilizado pelo Charm++. Possui uma abordagem centralizada, o que significa que a estrutura de cargas e de comunicação da maquina, alem de um processo de tomada de decisao, ficam armazenadas em um unico ponto. A escolha de uma abordagem centralizada se deu pelo fato desta realizar um balanceamento mais preciso em relac ̧ao ̃as outras`abordagens. Apesar de trabalhar muito bem com alguns milhares de processadores, podeenfrentar problemas de escalabilidade principalmente em maquinas paralelas com pouca ́memoria.
 
 \section{Metodologias de Implementação}
 
@@ -30,10 +29,7 @@ O \charm adota uma metodologia baseada na medição das cargas das tarefas que e
 
 \section{Algoritmo}
 
-A estratégia utilizada para implementação do balanceamento de carga proposto constitui-se de melhorias nas estrategias utilizadas nos algoritmos \greedylb e \refinelb. Nossas melhorias buscam equilibrar as cargas entre os processadores reduzindo o número de migrações, adotando um threshold para definir o desbalanceamento de carga aceitável.
-
-Na Figura \ref{img_smartlb_effect} é exemplificado o funcionamento da estratégia de tomada de decisão do \newlb. A partir de informações fornecidas pelo \charm, o algoritmo proposto busca atingir ba lanceamento levando em consideração a diferença de carga entre o core mais carregado e o
-menos carregado. Desta forma, migra tarefas do core mais carregado para o core com menor carga, buscando equilibrar a carga total do sistema, reduzir o número de migrações e reduzir o tempo total de execução da aplicação.
+Na Figura \ref{img_smartlb_effect} é exemplificado o funcionamento da estratégia de tomada de decisão do \newlb. A partir de informações fornecidas pelo \charm, o algoritmo proposto busca atingir ba lanceamento levando em consideração a diferença de carga entre o core mais carregado e o menos carregado. Desta forma, migra tarefas do core mais carregado para o core com menor carga, buscando equilibrar a carga total do sistema, reduzir o número de migrações e reduzir o tempo total de execução da aplicação.
 
 \begin{figure}[!htb]
 	\centering
@@ -43,6 +39,8 @@ menos carregado. Desta forma, migra tarefas do core mais carregado para o core c
 	\label{img_smartlb_effect}
 	\centering
 \end{figure}
+
+A estratégia utilizada para implementação do balanceamento de carga proposto constitui-se de melhorias nas estrategias utilizadas nos algoritmos \greedylb e \refinelb. Nossas melhorias buscam equilibrar as cargas entre os processadores reduzindo o número de migrações, adotando um threshold para definir o desbalanceamento de carga aceitável.
 
 Na Tabela 1 são apresentados os principais parâmetros utilizados na implementação do
 algoritmo proposto.
@@ -57,18 +55,18 @@ algoritmo proposto.
 			\hline
 			\textbf{Parâmetro} & \textbf{Definição} \\
 			\hline
-			$ PM $ & Processador com maior carga \\
-			$ Pm $ & Processador com menor carga \\ 
+			$ PM $ & Core com maior carga \\
+			$ Pm $ & Core com menor carga \\ 
 			
 			$ D $ & Desbalanceamento entre $PM$ e $Pm$ \\
 			
 			$ ct $ & Carga da tarefa $P$ \\
 			$ nTarefas $ &  Número de tarefas\\
 			
-			$ getProcessadorAtual(i) $ & Retorna o processador atual da tarefa\\
+			$ getCoreAtual(i) $ & Retorna o processador atual da tarefa\\
 			$ getCargaTarefa()     $ & Retorna a carga da tarefa\\
-			$ getCargaMaior() 	     $ & Retorna a carga do processador mais carregado \\
-			$ getCargaMenor()        $ & Retorna a carga do processador menos carregado \\
+			$ getCargaMaior() 	     $ & Retorna a carga do core mais carregado \\
+			$ getCargaMenor()        $ & Retorna a carga do core menos carregado \\
 			
 			$ migrarProcesso(i, PM, Pm) $ & Migrar tarefa $i$ de $ PM $ para $ Pm $ \\
 			
@@ -76,6 +74,9 @@ algoritmo proposto.
 			\hline
 		\end{tabular}
 } \end{table}
+
+
+Quando o balanceador é aplicado primeira mente verifica as cargas do core mais carregado e o core menos carregado, a partir dessa informação ele analisa a diferença de carga entre o core mais e menos carregado. Caso essa diferença for maior que o \textit{threshold} definido o balanceador busca tarefas do processador mais carregado testando se a carga da tarefa é menor ou igual ao desbalanceamento. Caso seja, ele realiza a migração desta tarefa do core mais carregado para o menos carregado e encontra o novo core mais carregado e o novo processador menos carregado, como demonstrado no Algoritmo 1. 
 
 \begin{table}[h]
 	\centering
@@ -93,7 +94,7 @@ algoritmo proposto.
 			2 & $Pm = getCargaMenor();$  \\
 			3 & $\textbf{if}( (Pm / PM ) > Threshold)$ \{ \\
 			4 & $~~~~~~~\textbf{for}(i=1; i<=nTarefas; i++)$ \{ \\
-			5 & $~~~~~~~~~~~~\textbf{if}(getProcessadorAtual(i) == PM)$ \{ \\
+			5 & $~~~~~~~~~~~~\textbf{if}(getCoreAtual(i) == PM)$ \{ \\
 			6 & $~~~~~~~~~~~~~~~~ ct = getCargaTarefa(i);$  \\
 			7 & $~~~~~~~~~~~~~~~~ D = PM-Pm;$  \\
 			8 & $~~~~~~~~~~~~~~~~~ \textbf{if}(ct <= D)$ \{\\
@@ -109,6 +110,4 @@ algoritmo proposto.
 	}
 \end{table} 
 
-Assim, quando o balanceador é aplicado, ele primeiro analisa a diferença de carga entre o processador mais e menos carregado. Caso essa diferença for maior que o \textit{threshold} o balanceador busca tarefas do processador mais carregado testando se a carga da tarefa é menor ou igual ao desbalanceamento. Caso seja, ele realiza a migração desta tarefa do processador mais carregado para o menos carregado e encontra o novo processador mais carregado e o novo processador menos carregado, como demonstrado no Algoritmo 1. 
-
-Desta forma, consegue-se um balanceamento de carga mais preciso, evitando migrações desnecessárias. Após a execução, quando não existem mais processadores a serem mapeados e as cargas de todas as unidades de processamento possuem um valor próximo um do outro, o balanceamento é encerrado. 
+Desta forma, consegue-se um balanceamento de carga mais preciso, pois caso o desbalanceamento entre o core mais e menos carregado muito pequeno o algoritmo não irá realizar nenhuma ação, e quando esse desbalanceamento for grande ele migra somente tarefas que carga menor a diferença. evitando muitas migrações desnecessárias. Após a execução, quando não existem mais cores a serem mapeados e as cargas de todas as unidades de processamento possuem um valor próximo um do outro, o balanceamento é encerrado. 
